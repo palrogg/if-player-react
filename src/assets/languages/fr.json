@@ -1,0 +1,16 @@
+{
+  "menu":
+  {
+    "game": "Jouer",
+    "about": "À propos"
+  },
+  "buttons":
+  {
+    "north": "Nord",
+    "west": "Ouest",
+    "east": "Est",
+    "south": "Sud",
+    "up": "Haut",
+    "down": "Bas"
+  }
+}

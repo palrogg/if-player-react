@@ -1,0 +1,16 @@
+{
+  "menu":
+  {
+    "game": "Game",
+    "about": "About"
+  },
+  "buttons":
+  {
+    "north": "North",
+    "west": "West",
+    "east": "East",
+    "south": "South",
+    "up": "Up",
+    "down": "Down"
+  }
+}

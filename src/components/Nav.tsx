@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components/macro";
 import { theme } from "../theme";
 import React, { FunctionComponent } from "react";
+import useStrings from "./Localize"
 
 const NavDiv = styled.div`
   position: absolute;
@@ -34,12 +35,12 @@ const Nav: FunctionComponent = () => {
       <ul>
         <li>
           <NavLink to={`${process.env.PUBLIC_URL}/game`} activeStyle={{ color: theme.HIGHLIGHT_COLOR }}>
-            Game
+            {useStrings().menu.game}
         </NavLink>
         </li>
         <li>
           <NavLink to={`${process.env.PUBLIC_URL}/about`} activeStyle={{ color: theme.HIGHLIGHT_COLOR }}>
-            About
+            {useStrings().menu.about}
         </NavLink>
         </li>
 

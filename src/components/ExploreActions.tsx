@@ -5,6 +5,7 @@ import { ActionButton } from "../styled-constants";
 import { getRoomData, getAllowedExits } from "../utils/dataHelper";
 import { resultMessage, resultLocation } from "../actions";
 import { IState, IRoomData } from "../types"
+import useStrings from "./Localize"
 
 const ActionsDiv = styled.div`
   display: inline-block;
@@ -75,32 +76,32 @@ const ExploreActions: FunctionComponent  = () => {
         }}
       >
         <MoveButton disabled={!exits.includes("n")} onClick={handleMove("North")}>
-          North
+          {useStrings().buttons.north}
             </MoveButton>
         <div>
           <div style={{ display: "inline-block", width: "50%" }}>
             <MoveButton disabled={!exits.includes("w")} onClick={handleMove("West")}>
-              West
+              {useStrings().buttons.west}
             </MoveButton>
           </div>
           <div style={{ display: "inline-block", width: "50%" }}>
             <MoveButton disabled={!exits.includes("e")} onClick={handleMove("East")}>
-              East
+              {useStrings().buttons.east}
             </MoveButton>
           </div>
         </div>
         <MoveButton disabled={!exits.includes("s")} onClick={handleMove("South")}>
-          South
+          {useStrings().buttons.south}
             </MoveButton>
         <div>
           <div style={{ display: "inline-block", width: "50%" }}>
             <MoveButton disabled={!exits.includes("u")} onClick={handleMove("Up")}>
-              Up
+              {useStrings().buttons.up}
             </MoveButton>
           </div>
           <div style={{ display: "inline-block", width: "50%" }}>
             <MoveButton disabled={!exits.includes("d")} onClick={handleMove("Down")}>
-              Down
+              {useStrings().buttons.down}
             </MoveButton>
           </div>
         </div>
