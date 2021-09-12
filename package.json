@@ -2,7 +2,7 @@
   "name": "if-player-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://markhorsell.com/shivers-react",
+  "homepage": "https://ww2.paulronga.ch/interactive/",
   "homepageGHP": "http://markhorsell.github.io/if-player-react",
   "dependencies": {
     "@types/jest": "^24.9.0",
