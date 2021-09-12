@@ -17,7 +17,7 @@ import {
 
 import { IRoomData, IItem, /*IAction, */ IGameState} from "../types";
 
-import initialData from "../assets/theshivers/data.json";
+import initialData from "../assets/stories/nouvellevie/data.json";
 
 interface IReduxAction {
  type:string;
@@ -26,6 +26,7 @@ interface IReduxAction {
 
 export const emptyState:IGameState = {
 
+    language: "",
     gameTitle: "",
     score: 0,
     money: 0,

@@ -14,6 +14,7 @@ export interface IState {
 }
 export interface IGameState {
  
+    language: string;
     gameTitle: string;
     score: number;
     money: number;
