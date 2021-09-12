@@ -15,6 +15,7 @@ import thunk from 'redux-thunk';
 
 const persistConfig = {
   key: 'root',
+  whitelist: [], // TODO for debug -- remove when you put in production
   storage,
 }
 
