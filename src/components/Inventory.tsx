@@ -2,6 +2,7 @@ import React, {FunctionComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled  from "styled-components/macro";
 import { IItem } from "../types"
+import useStrings from "./Localize"
 
 const InventoryDiv= styled.div`
 	margin-top:10px;
@@ -15,12 +16,12 @@ type IProps = {
 const Inventory: FunctionComponent<IProps>  = ({ items = [],money=0 }) => {
 	const inventory = items.map((item:IItem)=>{
 		return item.desc;
-	}).join(", ")+' and '+money+' coins.';
+	}).join(", ") + ' ' + useStrings().and + ' ' + money + ' ' + useStrings().coinCurrency + '.';
 	
 	return (
 	
 		<InventoryDiv>
-		<div>You are carrying :</div>
+		<div>{useStrings().carryingMessage}</div>
 		<div>{inventory}</div>
 		</InventoryDiv>
 	

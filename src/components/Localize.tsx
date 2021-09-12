@@ -3,5 +3,5 @@ import fr from "../assets/languages/fr.json";
 
 export default function useStrings(){
   // TODO
-  return en
+  return fr
 };

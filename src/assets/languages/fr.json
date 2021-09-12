@@ -12,5 +12,19 @@
     "south": "Sud",
     "up": "Haut",
     "down": "Bas"
-  }
+  },
+  "resultMessages":
+  {
+    "north": "Vous êtes allée au nord",
+    "west": "Vous êtes allée à l’ouest",
+    "east": "Vous êtes allée à l’est",
+    "south": "Vous êtes allée au sud",
+    "up": "Vous êtes allée en haut",
+    "down": "Vous êtes allée en bas"
+  },
+  "carryingMessage": "Vous avez sur vous:",
+  "locationMessage": "Dans votre champ de vision:",
+  "locationMessageNothing": "Rien de particulier.",
+  "and": "et",
+  "coinCurrency": "francs"
 }

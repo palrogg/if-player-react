@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import PropTypes from "prop-types";
 import { IItem } from "../types"
 import styled from "styled-components/macro"
+import useStrings from "./Localize"
 
 const LocationObjectsDiv = styled.div`
   margin-top:10px;
@@ -22,11 +23,11 @@ const LocationObjects: FunctionComponent<IProps> = ({ items = [] }) => {
     .join(", ");
   return (
     <LocationObjectsDiv>
-      <div>In this place :</div>
+      <div>{useStrings().locationMessage}</div>
       {locationObjects.length > 0 ? (
         <div>{locationObjects}.</div>
       ) : (
-          <div>Nothing of interest.</div>
+          <div>Rien de particulier.</div>
         )}
     </LocationObjectsDiv>
   );

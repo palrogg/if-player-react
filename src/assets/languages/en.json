@@ -12,5 +12,19 @@
     "south": "South",
     "up": "Up",
     "down": "Down"
-  }
+  },
+  "resultMessages":
+  {
+    "north": "You've travelled North",
+    "west": "You've travelled West",
+    "east": "You've travelled East",
+    "south": "You've travelled South",
+    "up": "You've travelled Up",
+    "down": "You've travelled Down"
+  },
+  "carryingMessage": "You are carrying :",
+  "locationMessage": "In this place :",
+  "locationMessageNothing": "Nothing of interest.",
+  "and": "and",
+  "coinCurrency": "coins"
 }

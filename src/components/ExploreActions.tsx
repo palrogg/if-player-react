@@ -29,6 +29,7 @@ const ExploreActions: FunctionComponent  = () => {
   const dispatch = useDispatch();
   const roomID: number | string = useSelector((state: IState) => state.gameData.room);
   const rooms: Array<IRoomData> = useSelector((state: IState) => state.gameData.rooms);
+  const resultMessages = useStrings().resultMessages;
 
   const handleMove = (selectedExit: string) => (e: React.MouseEvent<HTMLButtonElement>) => {
     const currentRoomExits: IExits = getRoomData(roomID, rooms).exits;
@@ -37,27 +38,27 @@ const ExploreActions: FunctionComponent  = () => {
     switch (selectedExit) {
       case "Up":
         dispatch(resultLocation(currentRoomExits.u));
-        dispatch(resultMessage("You've travelled Up"));
+        dispatch(resultMessage(resultMessages.up));
         break;
       case "Down":
         dispatch(resultLocation(currentRoomExits.d));
-        dispatch(resultMessage("You've travelled Down"));
+        dispatch(resultMessage(resultMessages.down));
         break;
       case "North":
         dispatch(resultLocation(currentRoomExits.n));
-        dispatch(resultMessage("You've travelled North"));
+        dispatch(resultMessage(resultMessages.north));
         break;
       case "South":
         dispatch(resultLocation(currentRoomExits.s));
-        dispatch(resultMessage("You've travelled South"));
+        dispatch(resultMessage(resultMessages.south));
         break;
       case "West":
         dispatch(resultLocation(currentRoomExits.w));
-        dispatch(resultMessage("You've travelled West"));
+        dispatch(resultMessage(resultMessages.west));
         break;
       case "East":
         dispatch(resultLocation(currentRoomExits.e));
-        dispatch(resultMessage("You've travelled East"));
+        dispatch(resultMessage(resultMessages.east));
         break;
       default:
         console.warn("WARNING - EXIT = [" + selectedExit + "] is not being processed!");

@@ -3,7 +3,7 @@ import { debounce } from "lodash";
 import styled from "styled-components/macro";
 import { IRoomData } from "../types"
 
-const canvasPath = "url('" + process.env.PUBLIC_URL + "/assets/theshivers/images/game_bg.jpg')"
+const canvasPath = "url('" + process.env.PUBLIC_URL + "/assets/nouvellevie/images/game_bg.jpg')"
 const WorldMapDiv = styled.div`
     > canvas {
       border-radius: 10px;
