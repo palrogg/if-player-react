@@ -1,0 +1,101 @@
+{
+  "DEV_COMMENT": "room will be 'Street' but testing new ideas at 22",
+  "DEV_COMMENT2": "thomas kinkade - remember to clear persist",
+  "room": "Street",
+  "gameTitle": "Nouvelle vie",
+  "score": 0,
+  "money": 50,
+
+  "discoveredPaths": [],
+
+  "move": 0,
+  "lastMessage_RESTORE": "You have just leant back in your seat. It's a beautiful night and you just gaze out the window.",
+  "lastMessage": "",
+  "rooms": [
+    {
+      "id": "",
+      "exits": {},
+      "desc": [
+        "ERROR : This isnt a location its reserved for objects at 0 = inventory"
+      ]
+    },
+    {
+      "id": "Street",
+      "image": "sky_8_3.jpg",
+      "showOnMap": true,
+      "exits": {},
+      "desc": [
+        "Vous êtes une conseillère juridique de 32 ans et vous en avez ras le bol."
+      ]
+    },
+    {
+      "id": "Bookshop",
+      "image": "bookshop.jpg",
+      "exits": { "u": "Bookshop_mezzanine" },
+      "desc": ["Vous êtes dans la librairie."]
+    },
+    {
+      "id": "Bookshop_mezzanine",
+      "image": "bookshop.jpg",
+      "exits": { "d": "Bookshop"},
+      "desc": [
+        "Vous êtes dans la mezzanine. Deux libraires vous observent."
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action": "Entrer dans la librairie",
+      "conditions": { "roomContains": ["BOOKSHOP"] },
+      "results": {
+        "message": "",
+        "changeLocation": "Bookshop",
+        "changeScore": 1
+      }
+    },
+    {
+      "action": "Prendre un livre",
+      "conditions": { "roomContains": ["BOOKS"] },
+      "results": {
+        "message": "Le titre est: «Aujourd’hui je change de vie.»",
+        "changeScore": 1
+      }
+    },
+    {
+      "action": "PLAY AGAIN",
+      "conditions": { "location": "EndStreet" },
+      "results": {
+        "restart": "true"
+      }
+    }
+  ],
+
+  "_object_comment": "inventory item are :loc === 'INV'",
+
+  "objects": [
+    {
+      "obj": "ESCALIERS",
+      "loc": "Bookshop",
+      "desc": "Un escalier permet d’atteindre une mezzanine"
+    },
+    {
+      "obj": "BOOKS",
+      "loc": "Bookshop_mezzanine",
+      "desc": "Le rayon des livres de développement personnel"
+    },
+    {
+      "obj": "BOOK",
+      "loc": "INV",
+      "desc": "Un livre de développement personnel"
+    },   
+    { "obj": "INV_TRIGGER1", "loc": "44", "desc": "invisible", "show": false },
+    {
+      "obj": "UNPURCHASED_HUNTING_HORN",
+      "loc": "36",
+      "desc": "For sale is a hunting horn"
+    },
+    { "obj": "HUNTING_HORN", "loc": "", "desc": "An unplayable horn" },
+    { "obj": "PLAYABLE_HORN", "loc": "", "desc": "A playable hunting horn" },
+    { "obj": "BOOKSHOP", "loc": "Street", "desc": "Une librairie" }
+  ]
+}
